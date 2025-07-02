@@ -1,9 +1,11 @@
-<h3>Gestor de noticias.</h3>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Agregar Noticia
-</button>
+<div class="container">
+    <h3 id="titleNews">Gestor de noticias.</h3>
+    <!-- Button trigger modal -->
+    <button type="button" id="btnAdd" class="btn btn-outline-dark" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
+        Agregar Noticia
+    </button>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -36,9 +38,9 @@
         </div>
     </div>
 </div>
-<div class="card mb-3" *ngFor="let new of data">
-    <div class="card-body">
-        <h5 class="card-title">{{new[1]}}</h5>
+<div id="cards" class="card mb-3" *ngFor="let new of data">
+    <div id="card" class="card-body">
+        <h3 class="card-title">{{new[1]}}</h3>
         <p class="card-text">
             {{new[2]}}
         </p>
@@ -46,8 +48,8 @@
     </div>
     <div class="card-footer">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Editar</button>
-            <button type="button" class="btn btn-primary" (click)="deletePost(new[0])">Eliminar</button>
+            <a type="button" class="link-opacity-75-hover">Editar</a>
+            <a type="button" class="link-opacity-75-hover" (click)="deletePost(new[0])">Eliminar</a>
         </div>
     </div>
 </div>

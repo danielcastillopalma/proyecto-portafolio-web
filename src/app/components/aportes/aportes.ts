@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Apirest } from '../../services/apirest/apirest';
 
 @Component({
@@ -8,11 +8,14 @@ import { Apirest } from '../../services/apirest/apirest';
   templateUrl: './aportes.html',
   styleUrl: './aportes.css'
 })
-export class Aportes {
+export class Aportes implements AfterViewInit {
   aportes: any;
-  constructor(private api: Apirest) {
-    this.api.getAportes().then(res => {
+  async ngAfterViewInit(): Promise<void> {
+    await this.api.getAportes().then(res => {
       this.aportes = res;
     })
+  }
+  constructor(private api: Apirest) {
+
   }
 }

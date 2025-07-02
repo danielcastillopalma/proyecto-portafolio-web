@@ -1,1 +1,46 @@
-<p *ngFor="let aporte of aportes">{{aporte}}</p>
+<small>* Acá podrás visualizar todos los aportes realizados por los usuarios</small>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" style="text-align: left;">ID</th>
+            <th scope="col" style="text-align: left;">FECHA</th>
+            <th scope="col" style="text-align: left;">PUNTOS</th>
+            <th scope="col" style="text-align: left;">EVIDENCIA</th>
+            <th scope="col" style="text-align: left;">CORREO</th>
+            <th scope="col" style="text-align: left;">PUNTO VERDE</th>
+            <th scope="col" style="text-align: left;">ESTADO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--fila-->
+        <tr *ngFor="let aporte of aportes">
+            <th scope="row" style="text-align: left;">
+                <p>{{aporte[0]}}</p>
+            </th>
+            <td>
+                <p>{{aporte[1]}}</p>
+            </td>
+            <td>
+                <p>{{aporte[2]}}</p>
+            </td>
+            <td>
+                <div class="popup-container">
+                    <a class="hover-text">Ver evidencia</a>
+                    <img *ngIf="aporte[3]" [src]="'data:image/jpeg;base64,' + aporte[3]" class="popup-img"
+                        alt="Evidencia" />
+                </div>
+            </td>
+
+            <td>
+                <p>{{aporte[4]}}</p>
+            </td>
+            <td>
+                <p>{{aporte[5]}}</p>
+            </td>
+            <td>
+                <p [class]="aporte[6]">{{aporte[6]}}</p>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

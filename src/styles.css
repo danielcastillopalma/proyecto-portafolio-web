@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+Estilos globales
+*/
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 2.6875rem;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+small {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 0.8125rem;
+}
+
+/*
+Paleta de colores primaria
+*/
+.bg-dark {
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.orange-duoc {
+    background-color: #FFB800;
+    color: black;
+}
+
+/*
+Paleta de colores secundaria
+*/
+
+.bg-grey {
+    background-color: #666666;
+    color: white;
+}
+
+.terciario {
+    background-color: #000000;
+    color: white;
+}
+
+.duocuc {
+    background-color: #eeeeee;
+    color: black;
+}
+
+/* Administración y Finanzas */
+.E-AyN-New {
+    background-color: #AC4FC6;
+
+    color: white;
+}
+
+.E-AyN-New.secondary {
+    background-color: #C98BDB;
+   
+    color: white;
+}
+
+/* Comunicaciones */
+.E-Com-New {
+    background-color: #D50032;
+
+    color: white;
+}
+
+.E-Com-New.secondary {
+    background-color: #DF4661;
+   
+    color: white;
+}
+
+/* Construcción */
+.E-Cons-New {
+    background-color: #E87722;
+   
+    color: white;
+}
+
+.E-Cons-New.secondary {
+    background-color: #ECA154;
+   
+    color: white;
+}
+
+/* Diseño */
+.E-Dis-New {
+    background-color: #C4D600;
+  
+    color: white;
+}
+
+.E-Dis-New.secondary {
+    background-color: #DBE442;
+   
+    color: white;
+}
+
+/* Gastronomía */
+.E-Gas {
+    background-color: #FF585D;
+
+    color: white;
+}
+
+.E-Gas.secondary {
+    background-color: #FF808B;
+  
+    color: white;
+}
+
+/* Informática */
+.E-IyT-New {
+    background-color: #307FE2;
+
+    color: white;
+}
+
+.E-IyT-New.secondary {
+    background-color: #8BB8E8;
+   
+    color: white;
+}
+
+/* Ingeniería, RN, Medio Ambiente */
+.E-Ing-New {
+    background-color: #43B02A;
+
+    color: white;
+}
+
+.E-Ing-New.secondary {
+    background-color: #A1D884;
+ 
+    color: white;
+}
+
+/* Salud */
+.E-Sal-New {
+    background-color: #5BC2E7;
+
+    color: white;
+}
+
+.E-Sal-New.secondary {
+    background-color: #99D6EA;
+    
+    color: white;
+}
+
+/* Turismo */
+.E-Tur-New {
+    background-color: #00A499;
+  
+    color: white;
+}
+
+.E-Tur-New.secondary {
+    background-color: #2AD2C9;
+    
+    color: white;
+}

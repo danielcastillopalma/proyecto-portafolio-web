@@ -18,7 +18,6 @@ export class Apirest {
         throw new Error('Error en la respuesta del servidor al tratar de obtener los datos de noticias');
       }
       const data = await response.json();
-      console.log(data);
       return data;
     } catch (error) {
       console.error(error);
@@ -27,7 +26,6 @@ export class Apirest {
   }
   //esta funcion elimina las noticias del backend
   public async delNew(id: number) {
-    console.log("id api: ", id);
     const response = await fetch(`https://respawnen3.duckdns.org/api/news/${id}`, {
       method: 'DELETE'
     });
@@ -37,7 +35,7 @@ export class Apirest {
   //Esta funcion publica las nuevas noticias en el backend
   public async postNew(title: string, message: string, reference: string, email: string) {
     try {
-      const createResponse = await fetch('https://respawnen3.duckdns.org/api/news', {
+      const createResponse = await fetch(`https://respawnen3.duckdns.org/api/news`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +68,6 @@ export class Apirest {
         throw new Error('Error en la respuesta del servidor al tratar de obtener los puntos verdes');
       }
       const data = await response.json();
-      console.log(data);
       return data;
     } catch (error) {
       console.error(error);

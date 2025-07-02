@@ -1,1 +1,50 @@
-<p *ngFor="let repo of reportes">{{repo}}</p>
+<small>* Acá podrás visualizar todas las sugerencias realizadas por los usuarios</small>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" style="text-align: left;">ID</th>
+            <th scope="col" style="text-align: left;">SUGERENCIA</th>
+            <th scope="col" style="text-align: left;">IMAGEN</th>
+            <th scope="col" style="text-align: left;">FECHA</th>
+            <th scope="col" style="text-align: left;">CORREO</th>
+            <th scope="col" style="text-align: left;">ESTADO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--fila-->
+        <tr *ngFor="let repo of reportes">
+            <th scope="row" style="text-align: left;">
+                <p>{{repo[0]}}</p>
+            </th>
+            <td>
+                <p>{{repo[1]}}</p>
+            </td>
+           
+           
+            <td>
+                <div class="popup-container">
+                    <a class="hover-text">Ver evidencia</a>
+                    <img *ngIf="repo[2]" [src]="'data:image/jpeg;base64,' + repo[2]" class="popup-img"
+                        alt="Evidencia" />
+                </div>
+            </td> 
+
+            <td>
+                <p>{{repo[3]}}</p>
+            </td>
+            <td>
+                <p>{{repo[4]}}</p>
+            </td>
+            <td>
+                <p>{{repo[5]}}</p>
+            </td>
+            <!--
+            
+            <td>
+                <p [class]="aporte[6]">{{aporte[6]}}</p>
+            </td>
+            -->
+        </tr>
+
+    </tbody>
+</table>
