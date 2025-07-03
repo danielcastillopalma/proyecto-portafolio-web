@@ -1,3 +1,43 @@
-<p *ngFor="let punto of puntosVerdes">
-    {{punto}}
-</p>
+<small>* Acá podrás visualizar todos los Puntos verdes.</small>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" style="text-align: left;">ID</th>
+            <th scope="col" style="text-align: left;">NOMBRE</th>
+            <th scope="col" style="text-align: left;">UBICACIÓN</th>
+            <th scope="col" style="text-align: left;">DESCRIPCIÓN</th>
+            <th scope="col" style="text-align: left;">ESTADO</th>
+            <th scope="col" style="text-align: left;">QR</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <!--fila-->
+        <tr *ngFor="let punto of puntosVerdes;index as i">
+            <th scope="row" style="text-align: left;">
+                <p>{{punto[0]}}</p>
+            </th>
+            <td>
+                <p>{{punto[1]}}</p>
+            </td>
+            <td>
+                <iframe width="200" height="100" [src]="getMapaUrl(punto[2], punto[3])" style="border:0;" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </td>
+
+            <td>
+                <p>{{punto[4]}}</p>
+            </td>
+            <td>
+                <p *ngIf="punto[5]=='S';else desact">Activo</p>
+                <ng-template #desact>En Pausa</ng-template>
+            </td>
+            <td>
+                <img [src]="getQrUrl( punto[6])" alt="QR">
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
